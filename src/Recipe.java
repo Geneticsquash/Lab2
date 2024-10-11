@@ -25,14 +25,13 @@ public class Recipe extends Categories {
         return recipeNumber;
     }
 
-    public void setRecipeNumber(int recipeNumber, Recipe obj) {
-        Recipe obj1 = obj;
+    public void setRecipeNumber(int recipeNumber) {
         this.recipeNumber = recipeNumber;
     }
     public class Demo
     {
 
-        public static void main(String[] args)
+        public static void demoSetRecipeNumber(String[] args)
         {  Recipe obj= new Recipe();
             obj.setRecipeNumber(1);
             obj.setRecipeName("Spicy Swedish Meatballs");
