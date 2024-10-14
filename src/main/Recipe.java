@@ -1,6 +1,8 @@
 public class Recipe extends Categories {
     // https://www.youtube.com/watch?v=K1iu1kXkVoA
     // https://www.youtube.com/watch?v=k_SJOnVa_G0
+
+
     private String recipeName;
     private int recipeNumber;
 
@@ -41,13 +43,3 @@ public class Recipe extends Categories {
         }
     }
 }
-
-   
-
-
-
-
-
-
-
-

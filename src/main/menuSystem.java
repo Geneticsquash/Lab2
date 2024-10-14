@@ -1,19 +1,44 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
-public class  menuSystem {
+public class  menuSystem {   // https://www.youtube.com/watch?v=K1iu1kXkVoA // https://www.youtube.com/watch?v=k_SJOnVa_G0
+    //TODO
+    // I will use Arraylist because it has a built-in methods for sorting, searching etc!
+    private String addNewRecipeName;
+    private int addNewRecipeNumber;
+    private static ArrayList<menuSystem> newRecipeList = new ArrayList<>();
 
-    public static int[] addRecipeSystem() {
 
-        String name = "ok...";
-        int addNewRecipeName = Integer.parseInt(name),addNewRecipeNumber = 0;
+    public menuSystem(String addNewRecipeName, int addNewRecipeNumber) {
+        this.addNewRecipeName = addNewRecipeName;
+        this.addNewRecipeNumber = addNewRecipeNumber;
+        newRecipeList.add(this);
+
+    }
+
+
+    public static void addRecipeSystem() {
+
+        String addNewRecipeName;
+        int addNewRecipeNumber;
         Scanner input = new Scanner(System.in);
-        System.out.println("Please enter the recipe name: ");
-        addNewRecipeName = input.nextInt();
-        System.out.println("Please enter the recipe number: ");
-        addNewRecipeNumber = input.nextInt();
+        System.out.println("Add a new recipe name: ");
+        addNewRecipeName = input.nextLine();
 
 
-        return new int[0];
+        do {
+            System.out.println("Please enter the recipe number: ");
+            addNewRecipeNumber = input.nextInt();
+
+            if (addNewRecipeNumber <= 0) {
+                System.out.println(" Invalid recipe number, try again: ");
+            }
+        }
+        while (addNewRecipeNumber <= 0);
+
+        newRecipeList.add(new menuSystem(addNewRecipeName, addNewRecipeNumber));
+
+
     }
 
 
@@ -26,6 +51,7 @@ public class  menuSystem {
 
 
         return new int[0];
+
     }
 
 }

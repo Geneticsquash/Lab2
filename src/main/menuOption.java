@@ -1,6 +1,6 @@
-
 import java.util.ArrayList;
 import java.util.Scanner;
+
 
 class menuOption {
     // Reusing the code from the 1st assignment with minor changes Lab 1
@@ -12,8 +12,7 @@ class menuOption {
                 "1. Add a new recipe to the menu", "2. View all the recipes we have on the menu", "3. Remove a recipe from the menu", "0. Exit the program"
         };
 
-
-        while (true) {
+        do {
             System.out.println("Choose an option");
 
             for (String option : menuOption) {
@@ -41,7 +40,6 @@ class menuOption {
                 }
                 case 0 -> {
                     System.out.println("Exit the program");
-                    return;
 
 
                 }
@@ -50,7 +48,7 @@ class menuOption {
                 }
             }
 
-        }
+        } while (menuChoice != 0);
 
     }
 
@@ -68,8 +66,8 @@ https://www.youtube.com/watch?v=kd3dr39rgrk&list=PLxuuH5GnCIlcGnesYMkGQOqokyI2Fw
 
 */
     public static void main(String[] args) {
-        
-        
+
+
         new menuOption();
         System.out.println("Welcome to the Menu System");
 
@@ -94,13 +92,5 @@ https://www.youtube.com/watch?v=kd3dr39rgrk&list=PLxuuH5GnCIlcGnesYMkGQOqokyI2Fw
         System.out.println(fruits1);
 
 */
-        }
     }
-
-
-
-
-
-
-
-
+}
