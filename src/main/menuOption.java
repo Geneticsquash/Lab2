@@ -1,7 +1,6 @@
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.io.*;
 
 class menuOption {
     // Reusing the code from the 1st assignment with minor changes Lab 1
