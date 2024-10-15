@@ -8,7 +8,7 @@ public class  menuSystem <Thing> {
 
     public menuSystem() {
         this.recipes = new ArrayList<>();
-        alreadyInMenu();
+        addRecipeSystem();
     }
 
 
@@ -48,15 +48,22 @@ public class  menuSystem <Thing> {
 //TODO Need to update addRecipeSystem!
     public static void addRecipeSystem() {
 
-
         String addNewRecipeName;
         int addNewRecipeNumber;
         Scanner input = new Scanner(System.in);
         System.out.println("Add a new recipe name: ");
         addNewRecipeName = input.nextLine();
+        System.out.println("Add a new recipe number: ");
+        addNewRecipeNumber = input.nextInt();
 
+        if (newRecipeList.isEmpty()) {
+            newRecipeList.add(new menuSystem("Mineral Earthworm", 1));
+            newRecipeList.add(new menuSystem("Lily Oyster Fried Rice", 2));
+            newRecipeList.add(new menuSystem("Leafburg Steak Tree", 3));
+            newRecipeList.add(new menuSystem("Air", 4));
+        }
 
-        do {
+        else {
             System.out.println("Please enter the recipe number: ");
             addNewRecipeNumber = input.nextInt();
             input.nextLine();
@@ -71,13 +78,7 @@ public class  menuSystem <Thing> {
 
     }
 
-    private <addRecipeSystem> void alreadyInMenu() {
-        if (newRecipeList.isEmpty()) {
-            newRecipeList.add(new menuSystem("Spaghetti", 1));
-            newRecipeList.add(new menuSystem("Potato", 2));
-            newRecipeList.add(new menuSystem("Kalkon", 3));
-        }
-    }
+
 
 //TODO Works fine, somehow when adding a recipe it duplicate itself?
 
