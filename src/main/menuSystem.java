@@ -83,20 +83,31 @@ public class  menuSystem {
     }
 //TODO Add/Fix removeMethod! https://www.youtube.com/watch?v=4VRvHdVrd1Y
     public static int[] removeRecipeSystem() {
-       // make a new array that is one smaller
-
         // ask the user which to remove
         Scanner input = new Scanner(System.in);
-        System.out.println("Remove a recipe: ");
+        System.out.println("Enter the name to remove a recipe: ");
         String removeRecipeName = input.nextLine();
+// List of all the recipes in viewMethod // Relearning Boolean https://www.youtube.com/watch?v=Jlv_fdB4cTY
+        boolean removeFound = false;
+        for(int j = 0; j < newRecipeList.size(); j++) {
+            if (newRecipeList.get(j).getAddNewRecipeName().equals(removeRecipeName)) {
+                newRecipeList.remove(j);
+                removeFound = true;
+                break;
+                // What, Intellj wrote from "int j etc to "break;"
+            }
+        }
+        if (removeFound) {
+            System.out.println("There are no recipe system available");
+        }
 
-        // copy the words that don´t match that input into new array
+
+        // Type number to remove
 
 
 
-// return it
+
         return new int[0];
-
     }
 
 }
