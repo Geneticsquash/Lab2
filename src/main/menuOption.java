@@ -30,7 +30,7 @@ class menuOption {
                 case 2 -> {
                     // TODO: Create a system where you can view a recipe with the following ingredient
                     System.out.println("2. View all the recipes we have on the menu");
-                    menuSystem.viewRecipeSystem();
+                    menuSystem.viewRecipeSystem(0);
                 }
 
                 case 3 -> {
