@@ -1,12 +1,21 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-public class  menuSystem {
+public class  menuSystem <Thing> {
+    private List<Thing> recipes;
+
+
     public menuSystem() {
-
-
-
+        this.recipes = new ArrayList<>();
+        alreadyInMenu();
     }
+
+
+    private String addNewRecipeName;
+    private int addNewRecipeNumber;
+
+
     //TODO  https://www.youtube.com/watch?v=K1iu1kXkVoA // https://www.youtube.com/watch?v=k_SJOnVa_G0
     // I will use Arraylist because it has a built-in methods for sorting, searching etc!
 
@@ -18,8 +27,6 @@ public class  menuSystem {
         this.addNewRecipeName = addNewRecipeName;
     }
 
-    private String addNewRecipeName;
-
     public int getAddNewRecipeNumber() {
         return addNewRecipeNumber;
     }
@@ -28,7 +35,6 @@ public class  menuSystem {
         this.addNewRecipeNumber = addNewRecipeNumber;
     }
 
-    private int addNewRecipeNumber;
 
     private static ArrayList<menuSystem> newRecipeList = new ArrayList<>();
 
@@ -36,7 +42,6 @@ public class  menuSystem {
     public menuSystem(String addNewRecipeName, int addNewRecipeNumber) {
         this.addNewRecipeName = addNewRecipeName;
         this.addNewRecipeNumber = addNewRecipeNumber;
-        newRecipeList.add(this);
 
     }
 
@@ -64,7 +69,14 @@ public class  menuSystem {
 
         newRecipeList.add(new menuSystem(addNewRecipeName, addNewRecipeNumber));
 
+    }
 
+    private <addRecipeSystem> void alreadyInMenu() {
+        if (newRecipeList.isEmpty()) {
+            newRecipeList.add(new menuSystem("Spaghetti", 1));
+            newRecipeList.add(new menuSystem("Potato", 2));
+            newRecipeList.add(new menuSystem("Kalkon", 3));
+        }
     }
 
 //TODO Works fine, somehow when adding a recipe it duplicate itself?
