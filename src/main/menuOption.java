@@ -20,6 +20,7 @@ class menuOption {
             }
             System.out.println("Enter your choice");
             menuChoice = scanner.nextInt();
+            scanner.nextLine();
 
             switch (menuChoice) {
                 // TODO: Create a system where you can create a recipe, while adding ingredient
