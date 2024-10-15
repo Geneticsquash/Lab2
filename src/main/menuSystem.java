@@ -6,8 +6,8 @@ public class  menuSystem {
 
 
 
-    }   // https://www.youtube.com/watch?v=K1iu1kXkVoA // https://www.youtube.com/watch?v=k_SJOnVa_G0
-    //TODO
+    }
+    //TODO  https://www.youtube.com/watch?v=K1iu1kXkVoA // https://www.youtube.com/watch?v=k_SJOnVa_G0
     // I will use Arraylist because it has a built-in methods for sorting, searching etc!
 
     public String getAddNewRecipeName() {
@@ -67,7 +67,7 @@ public class  menuSystem {
 
     }
 
-//TODO Works fine, somehow when adding a recipe it duplicate?
+//TODO Works fine, somehow when adding a recipe it duplicate itself?
 
     public static int[] viewRecipeSystem(int i) {
         if (newRecipeList.isEmpty()) {
@@ -94,18 +94,11 @@ public class  menuSystem {
                 newRecipeList.remove(j);
                 removeFound = true;
                 break;
-                // What, Intellj wrote from "int j etc to "break;"
             }
         }
         if (removeFound) {
             System.out.println("There are no recipe system available");
         }
-
-
-        // Type number to remove
-
-
-
 
         return new int[0];
     }

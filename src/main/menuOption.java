@@ -51,9 +51,8 @@ class menuOption {
 
         } while (menuChoice != 0);
 
+
     }
-
-
 
     /* Create a main class that handles the program´s logic and additional,
 classes for recipes, ingredients, and Categories
@@ -71,27 +70,8 @@ https://www.youtube.com/watch?v=kd3dr39rgrk&list=PLxuuH5GnCIlcGnesYMkGQOqokyI2Fw
 
         new menuOption();
         System.out.println("Welcome to the Menu System");
-
-
         Scanner in = new Scanner(System.in);
-        ArrayList<Recipe> recipes = new ArrayList<>();
-        recipes.add(new Recipe());
 
-        Recipe myRecipe = recipes.get(0);
 
-     /*   https://www.youtube.com/watch?v=pTAda7qU4LY
-
-        Testing Arrays
-        ArrayList fruits1 = new ArrayList();
-        fruits1.add("Apple");
-        fruits1.add("Bananas");
-        fruits1.add("Grapes");
-        fruits1.add("Bruh");
-        fruits1.remove("Bananas");
-      fruits1.clear();
-        System.out.println(fruits1.contains("Dragon"));
-        System.out.println(fruits1);
-
-*/
     }
 }
