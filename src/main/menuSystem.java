@@ -55,6 +55,8 @@ public class  menuSystem <Thing> {
         addNewRecipeName = input.nextLine();
         System.out.println("Add a new recipe number: ");
         addNewRecipeNumber = input.nextInt();
+        addNewRecipeNumber = Integer.parseInt(input.nextLine());
+
 
         if (newRecipeList.isEmpty()) {
             newRecipeList.add(new menuSystem("Mineral Earthworm", 1));
