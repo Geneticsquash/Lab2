@@ -1,36 +1,54 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 //TODO Trying to add preExisting recipes
 class defaultRecipe {
+    private int idNumber;
+    private String recipename;
+    private ArrayList<defaultIngredients> ingredients;
 
-    public defaultRecipe(int defaultRecipe) {
-        this.defaultRecipe = defaultRecipe;
+    public defaultRecipe(int idNumber, String recipename, ArrayList<defaultIngredients> ingredients) {
+    this.idNumber = idNumber;
+    this.recipename = recipename;
+    this.ingredients = new ArrayList<>();
+
     }
 
-    public int getDefaultRecipe() {
-        return defaultRecipe;
+    public defaultRecipe(int idNumber, String mineralEarthworm) {
     }
 
-    public void setDefaultRecipe(int defaultRecipe) {
-        this.defaultRecipe = defaultRecipe;
+    public int getIdNumber() {
+        return idNumber;
     }
-
+    public String getRecipename() {
+        return recipename;
+    }
+    public ArrayList<defaultIngredients> getIngredients() {
+        return ingredients;
+    }
+    public void addIngredient(defaultIngredients ingredient) {
+        ingredients.add(ingredient);
+    }
+    // Completion and inspection system broken
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         defaultRecipe that = (defaultRecipe) o;
-        return defaultRecipe == that.defaultRecipe;
+        return idNumber == that.idNumber;
     }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(defaultRecipe);
+@Override
+public int hashCode() {
+    return idNumber;
     }
-
-    int defaultRecipe;
 }
+
+
+
+
+
+
+
+
 
 

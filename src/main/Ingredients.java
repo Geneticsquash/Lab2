@@ -1,35 +1,29 @@
-import java.util.Objects;
-
 class defaultIngredients<T>  {
+    private String ingredientName;
 
-    public int getDefaultIngredients() {
-        return defaultIngredients;
-    }
-
-    public void setDefaultIngredients(int defaultIngredients) {
-        this.defaultIngredients = defaultIngredients;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        defaultIngredients<?> that = (defaultIngredients<?>) o;
-        return defaultIngredients == that.defaultIngredients;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(defaultIngredients);
-    }
-
-    int defaultIngredients;
-
-    public defaultIngredients() {
-    }
+public defaultIngredients(String ingredientName) {
+    this.ingredientName = ingredientName;
 }
 
+public String getIngredientName() {
+return ingredientName;
 
+
+}
+// IntelliJ IDEA's code completion and inspection system is pretty good!
+@Override
+    public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    defaultIngredients that = (defaultIngredients) o;
+    return ingredientName.equals(that.ingredientName);
+}
+
+@Override
+    public int hashCode() {
+    return ingredientName.hashCode();
+}
+}
 
 
 
