@@ -6,7 +6,8 @@ class menuOption {
 private menuOption menuOption;
 
 
-
+//TODO
+// Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.util.ArrayList.add(Object)" because "this.ingredients" is null
 
 public menuOption() {
 
