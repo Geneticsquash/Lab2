@@ -1,20 +1,20 @@
 import java.util.ArrayList;
-import java.util.List;
 
 //TODO Trying to add preExisting recipes
-class defaultRecipe {
+class Recipe {
     private int idNumber;
     private String recipename;
-    private ArrayList<defaultIngredients> ingredients; // Generics
+    private ArrayList<Ingredients> ingredients; // Generics
 
-    public defaultRecipe(int idNumber, String recipename, ArrayList<defaultIngredients> ingredients) {
+    public Recipe(int idNumber, String recipeName, ArrayList<Ingredients> ingredients) {
     this.idNumber = idNumber;
-    this.recipename = recipename;
+    this.recipename = recipeName;
     this.ingredients = new ArrayList<>(); // Generics
 
     }
 
-    public defaultRecipe(int idNumber, String mineralEarthworm) {
+    public Recipe(int idNumber, String recipeName) {
+        this.idNumber = idNumber;
     }
 
     public int getIdNumber() {
@@ -23,10 +23,10 @@ class defaultRecipe {
     public String getRecipename() {
         return recipename;
     }
-    public ArrayList<defaultIngredients> getIngredients() {
+    public ArrayList<Ingredients> getIngredients() {
         return ingredients;
     }
-    public void addIngredient(defaultIngredients ingredient) {
+    public void addIngredient(Ingredients ingredient) {
         ingredients.add(ingredient);
     }
     // Completion and inspection system broken
@@ -34,7 +34,7 @@ class defaultRecipe {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        defaultRecipe that = (defaultRecipe) o;
+        Recipe that = (Recipe) o;
         return idNumber == that.idNumber;
     }
 @Override

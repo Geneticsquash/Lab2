@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 //TODO 10-18
 // Objektorienterad programmering (G5) - I´m getting there,
@@ -7,12 +6,12 @@ import java.util.Scanner;
 // Verifiering och felsökning (G14) - Yes, I have!
 // Enhetstestning (G7 +  G16) - Did not follow the correct instruction, I did the code for JUnit test before coding, Add, View and remove methods. Where to I go from here!?
 
-class menuOption {
+class MenuOption {
 
 //TODO
 // Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.util.ArrayList.add(Object)" because "this.ingredients" is null
 
-public menuOption() {
+public MenuOption() {
 
         int menuChoice;
         String[] menuOption = {
@@ -78,7 +77,7 @@ https://www.youtube.com/watch?v=kd3dr39rgrk&list=PLxuuH5GnCIlcGnesYMkGQOqokyI2Fw
     public static void main(String[] args) {
 
         System.out.println("Welcome to the Menu System");
-        new menuOption();
+        new MenuOption();
 
 
     }

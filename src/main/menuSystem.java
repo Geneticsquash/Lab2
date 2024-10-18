@@ -3,8 +3,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class  menuSystem {
-    private List<defaultRecipe> recipes;
-    private static ArrayList<defaultRecipe> newRecipesList = new ArrayList<>();
+    private List<Recipe> recipes;
+    private static ArrayList<Recipe> newRecipesList = new ArrayList<>();
 
 
     public menuSystem() {
@@ -12,14 +12,14 @@ public class  menuSystem {
         assignAddRecipeSystem();
     }
     private void assignAddRecipeSystem() {
-        defaultRecipe recipe1 = new defaultRecipe(1,"Mineral Earthworm");
-        recipe1.addIngredient(new defaultIngredients("Earthworm"));
+        Recipe recipe1 = new Recipe(1,"Mineral Earthworm");
+        recipe1.addIngredient(new Ingredients("Earthworm"));
         newRecipesList.add(recipe1);
 
-        defaultRecipe recipe2 = new defaultRecipe(2,"Lily Oyster Fried Rice");
-        recipe2.addIngredient(new defaultIngredients("Lily Flower"));
-        recipe2.addIngredient(new defaultIngredients("Oyster"));
-        recipe2.addIngredient(new defaultIngredients("Rice"));
+        Recipe recipe2 = new Recipe(2,"Lily Oyster Fried Rice");
+        recipe2.addIngredient(new Ingredients("Lily Flower"));
+        recipe2.addIngredient(new Ingredients("Oyster"));
+        recipe2.addIngredient(new Ingredients("Rice"));
         newRecipesList.add(recipe2);
 
     }
@@ -35,7 +35,7 @@ public class  menuSystem {
         int addNewRecipeNumber = scanner.nextInt();
         scanner.nextLine();
 
-        defaultRecipe newRecipeList = new defaultRecipe(addNewRecipeNumber, addNewRecipeName);
+        Recipe newRecipeList = new Recipe(addNewRecipeNumber, addNewRecipeName);
         newRecipesList.add(newRecipeList);
         System.out.println("You added a new recipe, hope it doest taste as horrible as last time...");
 }
@@ -48,9 +48,9 @@ public class  menuSystem {
             System.out.println("There are no recipe system available");
         } else {
             System.out.println("The recipe list:");
-            for (defaultRecipe recipe : newRecipesList) {
+            for (Recipe recipe : newRecipesList) {
                 System.out.println(recipe.toString() + "ID: " + recipe.getIdNumber() + ": ");
-                for(defaultIngredients ingredient : recipe.getIngredients()) {
+                for(Ingredients ingredient : recipe.getIngredients()) {
                     System.out.println(ingredient.toString());
                 }
                 System.out.println();
@@ -61,7 +61,7 @@ public class  menuSystem {
 
 //TODO Add/Fix removeMethod! https://www.youtube.com/watch?v=4VRvHdVrd1Y
     public void removeRecipeSystem() {
-/*
+
 
 
         Scanner input = new Scanner(System.in);
@@ -81,7 +81,7 @@ public class  menuSystem {
         if (!removeFound) {
             System.out.println("There are no recipe system available");
         }
- */
+
     }
 
 }
