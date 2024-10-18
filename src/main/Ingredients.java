@@ -1,4 +1,4 @@
-class defaultIngredients<T>  {
+class defaultIngredients<T> extends defaultRecipe {
     private String ingredientName;
 
 public defaultIngredients(String ingredientName) {

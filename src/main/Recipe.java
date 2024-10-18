@@ -5,12 +5,12 @@ import java.util.List;
 class defaultRecipe {
     private int idNumber;
     private String recipename;
-    private ArrayList<defaultIngredients> ingredients;
+    private ArrayList<defaultIngredients> ingredients; // Generics
 
     public defaultRecipe(int idNumber, String recipename, ArrayList<defaultIngredients> ingredients) {
     this.idNumber = idNumber;
     this.recipename = recipename;
-    this.ingredients = new ArrayList<>();
+    this.ingredients = new ArrayList<>(); // Generics
 
     }
 

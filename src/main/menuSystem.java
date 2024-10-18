@@ -41,7 +41,7 @@ public class  menuSystem {
 }
 
 
-//TODO Works fine, somehow when adding a recipe it duplicate itself?
+//TODO Works fine, somehow when adding a recipe it duplicate itself? (Fixed)
 
     public void viewRecipeSystem() {
         if (newRecipesList.isEmpty()) {
@@ -61,16 +61,18 @@ public class  menuSystem {
 
 //TODO Add/Fix removeMethod! https://www.youtube.com/watch?v=4VRvHdVrd1Y
     public void removeRecipeSystem() {
+/*
+
 
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the name to remove a recipe: ");
         String removeRecipeName = input.nextLine();
         boolean removeFound = false;
 
-            for (int j = 0; j < newRecipesList.size(); j++) {
-                newRecipesList.remove(j);
-                if (removeRecipeName.equals(newRecipesList.get(j).toString())) {
+            for (int i = 0; i < newRecipesList.size(); i++) {
+                if (removeRecipeName.equals(newRecipesList.get(i).toString())) {
                     removeFound = true;
+                    newRecipesList.remove(i);
                     break;
                 }
                }
@@ -79,7 +81,7 @@ public class  menuSystem {
         if (!removeFound) {
             System.out.println("There are no recipe system available");
         }
-
+ */
     }
 
 }

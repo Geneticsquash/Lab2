@@ -1,10 +1,13 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
+//TODO 10-18
+// Objektorienterad programmering (G5) - I´m getting there,
+// Användning av Generics (G6) - It´s in the ArrayList of the other classes
+// Versionshantering - I have done it from terminal, cmp and Git
+// Verifiering och felsökning (G14) - Yes, I have!
+// Enhetstestning (G7 +  G16) - Did not follow the correct instruction, I did the code for JUnit test before coding, Add, View and remove methods. Where to I go from here!?
 
 class menuOption {
-private menuOption menuOption;
-
 
 //TODO
 // Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.util.ArrayList.add(Object)" because "this.ingredients" is null
