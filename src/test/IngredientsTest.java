@@ -9,7 +9,7 @@ class IngredientsTest {
     void testGetIngredientName() {
         String ingredientName = "BBQ Popcorn";
         Ingredients ingredients = new Ingredients(ingredientName);
-        assertEquals("BBQ Popcorn", ingredients.getIngredientName());
+        assertEquals("BBQ Popcorn", ingredients.getName());
 
 
 
@@ -20,8 +20,8 @@ class IngredientsTest {
 
         String ingredientName = "BBQ Popcorn";
         Ingredients ingredients = new Ingredients(ingredientName);
-        ingredients.setIngredientName("BBQ Mosquitoes Sausage");
-        assertEquals("BBQ Mosquitoes Sausage", ingredients.getIngredientName());
+        ingredients.setName("BBQ Mosquitoes Sausage");
+        assertEquals("BBQ Mosquitoes Sausage", ingredients.getName());
     }
 
 }

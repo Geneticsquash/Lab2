@@ -1,7 +1,5 @@
 import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DefaultRecipeTest {
@@ -10,10 +8,8 @@ class DefaultRecipeTest {
     void getRecipename() {
         int addNewRecipeNumber = 1;
         String addNewRecipeName = "Chirashi Sushi Rock";
-        ArrayList<Recipe> newRecipesList = new ArrayList<>();
         Recipe newRecipeList = new Recipe(addNewRecipeNumber, addNewRecipeName);
-        newRecipesList.add(newRecipeList);
-        assertEquals(addNewRecipeName, newRecipeList.getRecipename());
+        assertEquals("Chirashi Sushi Rock", newRecipeList.getRecipename());
     }
 
     @Test
@@ -21,13 +17,18 @@ class DefaultRecipeTest {
         int addNewRecipeNumber = 1;
         String addNewRecipeName = "Chirashi Sushi Rock";
         Recipe newRecipeList = new Recipe(addNewRecipeNumber, addNewRecipeName);
-        Ingredients rice = new Ingredients("Rice");
+        Ingredients rice = new Ingredients("Sushi Rice");
         newRecipeList.addIngredient(rice);
         assertEquals(1, newRecipeList.getIngredients().size());
-        assertEquals("Rice", newRecipeList.getIngredients().get(0).getName());
     }
 
     @Test
     void addIngredient() {
+        int addNewRecipeNumber = 1;
+        String addNewRecipeName = "Chirashi Sushi Rock";
+        Recipe newRecipeList = new Recipe(addNewRecipeNumber, addNewRecipeName);
+        Ingredients rice = new Ingredients("Sushi Rice");
+        newRecipeList.addIngredient(rice);
+        assertEquals("Sushi Rice", newRecipeList.getIngredients().get(0).getName());
     }
 }

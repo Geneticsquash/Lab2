@@ -15,6 +15,8 @@ class Recipe {
 
     public Recipe(int idNumber, String recipeName) {
         this.idNumber = idNumber;
+        this.recipename = recipeName;
+        this.ingredients = new ArrayList<>(); // Generics
     }
 
     public int getIdNumber() {
@@ -29,7 +31,7 @@ class Recipe {
     public void addIngredient(Ingredients ingredient) {
         ingredients.add(ingredient);
     }
-    // Completion and inspection system broken
+    // Completion and inspection system broken!!
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

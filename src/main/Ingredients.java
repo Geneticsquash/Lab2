@@ -1,52 +1,15 @@
-class Ingredients<T> {
-    private String ingredientName;
+public class Ingredients {
+    private String name;
 
-
-    public Ingredients(String ingredientName) {
-        this.ingredientName = ingredientName;
+    public Ingredients(String name) {
+        this.name = name;
     }
 
-
-    public String getIngredientName() {
-        return ingredientName;
+    public String getName() {
+        return name;
     }
 
-    public void setIngredientName(String ingredientName) {
-        this.ingredientName = ingredientName;
+    public void setName(String name) {
+        this.name = name;
     }
-
-    @Override
-    public String toString() {
-        return "defaultIngredients{" +
-                "ingredientName='" + ingredientName + '\'' + '}';
-    }
-
-
-    /*
-
-
-    public String getIngredientName() {
-    return ingredientName;
-
-
-    }
-    // IntelliJ IDEA's code completion and inspection system is pretty good!
-    @Override
-        public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        defaultIngredients that = (defaultIngredients) o;
-        return ingredientName.equals(that.ingredientName);
-    }
-
-    @Override
-        public int hashCode() {
-        return ingredientName.hashCode();
-    }
-
-
- */
 }
-
-
-
