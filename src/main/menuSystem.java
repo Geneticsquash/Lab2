@@ -41,7 +41,9 @@ public class  menuSystem {
 }
 
 
-//TODO Works fine, somehow when adding a recipe it duplicate itself? (Fixed)
+//TODO Works fine, somehow when adding a recipe it duplicate itself? (old)
+    //TODO Need to update viewRecipeSystem! doesnt view the recipe correctly!
+
 
     public void viewRecipeSystem() {
         if (newRecipesList.isEmpty()) {
@@ -49,37 +51,38 @@ public class  menuSystem {
         } else {
             System.out.println("The recipe list:");
             for (Recipe recipe : newRecipesList) {
-                System.out.println(recipe.toString() + "ID: " + recipe.getIdNumber() + ": ");
-                for(Ingredients ingredient : recipe.getIngredients()) {
-                    System.out.println(ingredient.toString());
+                System.out.println("Recipe name: " + recipe.getRecipename() + "  | ID Number: " + recipe.getIdNumber());
+                System.out.println("Ingredients: ");
+                for (Ingredients ingredient : recipe.getIngredients()) {
+                    System.out.println("- " + ingredient.getName());
                 }
                 System.out.println();
             }
-            }
         }
+    }
 
 
 //TODO Add/Fix removeMethod! https://www.youtube.com/watch?v=4VRvHdVrd1Y
     public void removeRecipeSystem() {
 
 
-
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the name to remove a recipe: ");
-        String removeRecipeName = input.nextLine();
+        int removeRecipeIdNumber = Integer.parseInt(input.nextLine());
         boolean removeFound = false;
 
             for (int i = 0; i < newRecipesList.size(); i++) {
-                if (removeRecipeName.equals(newRecipesList.get(i).toString())) {
-                    removeFound = true;
+                if (removeRecipeIdNumber == newRecipesList.get(i).getIdNumber()) {
                     newRecipesList.remove(i);
+                    removeFound = true;
+                    System.out.println("Recipe with ID" + removeRecipeIdNumber + " has been removed, thank god, it tasted awful!");
                     break;
                 }
                }
 
 
         if (!removeFound) {
-            System.out.println("There are no recipe system available");
+            System.out.println("Recipe with ID" + removeRecipeIdNumber + " was not found, try again!");
         }
 
     }
