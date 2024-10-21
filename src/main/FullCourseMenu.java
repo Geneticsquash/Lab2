@@ -1,11 +1,14 @@
 public enum FullCourseMenu {
+
+    //TODO I´ll see what I can do with this enum
     //https://www.youtube.com/watch?v=wq9SJb8VeyM
-    HORS_D_OEUVRE,
-    SOUP,
-    FISH,
-    MEAT,
-    MAIN_COURSE,
-    SALAD,
-    DESSERT,
-    DRINK
+
+    Hors_D_oeuvre,
+    Soup,
+    Fish,
+    Meat,
+    Main_Course,
+    Salad,
+    Dessert,
+    Drink
 }

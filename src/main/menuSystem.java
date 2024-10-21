@@ -14,12 +14,12 @@ public class menuSystem {
     //TODO Recipe in class cannot be applied to given types (new)
     // Need to fix it, so it can be applied to the given types
     private void assignAddRecipeSystem() {
-        FullCourseMenu fullCourseMenu = FullCourseMenu.MAIN_COURSE;
-        Recipe recipe1 = new Recipe(1,"Mineral Earthworm", fullCourseMenu);
+        Recipe recipe1 = new Recipe(1,"Mineral Earthworm", FullCourseMenu.Main_Course);
         recipe1.addIngredient(new Ingredients("Earthworm"));
         newRecipesList.add(recipe1);
 
-        Recipe recipe2 = new Recipe(2,"Lily Oyster Fried Rice", fullCourseMenu);
+
+        Recipe recipe2 = new Recipe(2,"Lily Oyster Fried Rice", FullCourseMenu.Fish);
         recipe2.addIngredient(new Ingredients("Lily Flower"));
         recipe2.addIngredient(new Ingredients("Oyster"));
         recipe2.addIngredient(new Ingredients("Rice"));
