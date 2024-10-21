@@ -1,22 +1,20 @@
 import java.util.ArrayList;
 
 //TODO inheritance https://www.youtube.com/watch?v=zbVAU7lK25Q, https://www.w3schools.com/java/java_inheritance.asp
-class Recipe {
+public class Recipe extends Ingredients {
     private int idNumber;
     private String recipename;
     private ArrayList<Ingredients> ingredients; // Generics
+    private FullCourseMenu fullCourseMenu;
 
-    public Recipe(int idNumber, String recipeName, ArrayList<Ingredients> ingredients) {
-    this.idNumber = idNumber;
-    this.recipename = recipeName;
+    public Recipe(int idNumber, String recipeName, FullCourseMenu fullCourseMenu) {
+        super(recipeName);
+        this.recipename = recipeName;
+        this.idNumber = idNumber;
+    this.fullCourseMenu = fullCourseMenu;
     this.ingredients = new ArrayList<>(); // Generics
 
-    }
 
-    public Recipe(int idNumber, String recipeName) {
-        this.idNumber = idNumber;
-        this.recipename = recipeName;
-        this.ingredients = new ArrayList<>(); // Generics
     }
 
     public int getIdNumber() {
@@ -30,6 +28,9 @@ class Recipe {
     }
     public void addIngredient(Ingredients ingredient) {
         ingredients.add(ingredient);
+    }
+    public FullCourseMenu getFullCourseMenu() {
+        return fullCourseMenu;
     }
     // Completion and inspection system broken!!
     @Override

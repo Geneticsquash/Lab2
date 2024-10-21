@@ -1,42 +1,47 @@
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.w3c.dom.ls.LSOutput;
-
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-
-public class menuSystemTest {
-    private menuSystem System;
-
-
-@BeforeAll
-public void setUpBeforeClass() throws Exception {
-    System = new menuSystem();
-
-}
-
 
 /*
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-  @Test
-public void addRecipeSystem() {
-String testThing = "Chirashi Sushi Rock";
-InputStream inputStream  = new ByteArrayInputStream(simulatedInput.getBytes());
-      System.out.println(inputStream);
-  }
+import static org.junit.jupiter.api.Assertions.*;
+// Visste aldrig att man kunde göra en import static
+// Man kan tydligen då anvönda static metoder utan att skriva klassnamnet
+
+class MenuSystemTest {
+    private menuSystem SystemTest;
 
 
-    @Test
-    void viewRecipeSystem() {
+    @BeforeEach
+    void setUpBeforeClass() {
+        SystemTest = new menuSystem();
     }
 
 
-    //TODO I did the assignment incorrect, so this test is done after completing removal method.
     @Test
-    void removeRecipeSystem() {
+    void testAddRecipeSystem() {
+        System.addRecipeSystem("Chirashi Sushi Rock", 1);
+        assertFalse(System.getRecipes().isEmpty());
+        assertEquals("Chirashi Sushi Rock", System.getRecipes().get(0).getRecipename());
 
     }
+
+
+    @Test
+    void testViewRecipeSystem() {
+        System.addRecipeSystem("Test Recipe", 1);
+        String output = System.viewRecipeSystem();
+        assertTrue(output.contains("Test Recipe"));
+    }
+
+    @Test
+    void testRemoveRecipeSystem() {
+        System.addRecipeSystem("Test Recipe", 1);
+        System.removeRecipeSystem("Test Recipe");
+        assertTrue(System.getRecipes().isEmpty());
+    }
+}
+
+
 
  */
-}
+    //TODO I did the assignment incorrect, so this test is done after completing removal method.

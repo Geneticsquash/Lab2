@@ -1,19 +1,13 @@
 import java.util.Scanner;
-//TODO 10-18
-// Objektorienterad programmering (G5) - I´m getting there,
-// Användning av Generics (G6) - It´s in the ArrayList of the other classes
-// Versionshantering - I have done it from terminal, cmp and Git
-// Verifiering och felsökning (G14) - Yes, I have!
-// Enhetstestning (G7 +  G16) - Did not follow the correct instruction, I did the code for JUnit test before coding, Add, View and remove methods. Where to I go from here!?
-
 class MenuOption {
 
 //TODO
 // Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.util.ArrayList.add(Object)" because "this.ingredients" is null
-
+// Combine MenuOption, menuSystem and ManagingFullCourseClass
 public MenuOption() {
 
-        int menuChoice;
+
+    int menuChoice;
         String[] menuOption = {
                 "1. Add a new recipe to the menu", "2. View all the recipes we have on the menu", "3. Remove a recipe from the menu", "0. Exit the program"
         };
@@ -63,17 +57,6 @@ public MenuOption() {
 
     }
 
-    /* Create a main class that handles the program´s logic and additional,
-classes for recipes, ingredients, and Categories
-
-The application should apply OOP concepts:
-abstraction, encapsulation, inheritance, and polymorphism.
-
-// Object = an instance of a class that may contain attributes and methods
-
-https://www.youtube.com/watch?v=kd3dr39rgrk&list=PLxuuH5GnCIlcGnesYMkGQOqokyI2Fwu3g
-
-*/
     public static void main(String[] args) {
 
         System.out.println("Welcome to the Menu System");

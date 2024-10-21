@@ -1,6 +1,10 @@
 public class Ingredients {
     private String name;
 
+    public Ingredients() {
+
+    }
+
     public Ingredients(String name) {
         this.name = name;
     }

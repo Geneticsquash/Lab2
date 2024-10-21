@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class  menuSystem {
+public class menuSystem {
     private List<Recipe> recipes;
     private static ArrayList<Recipe> newRecipesList = new ArrayList<>();
 
@@ -11,12 +11,15 @@ public class  menuSystem {
         this.recipes = new ArrayList<>();
         assignAddRecipeSystem();
     }
+    //TODO Recipe in class cannot be applied to given types (new)
+    // Need to fix it, so it can be applied to the given types
     private void assignAddRecipeSystem() {
-        Recipe recipe1 = new Recipe(1,"Mineral Earthworm");
+        FullCourseMenu fullCourseMenu = FullCourseMenu.MAIN_COURSE;
+        Recipe recipe1 = new Recipe(1,"Mineral Earthworm", fullCourseMenu);
         recipe1.addIngredient(new Ingredients("Earthworm"));
         newRecipesList.add(recipe1);
 
-        Recipe recipe2 = new Recipe(2,"Lily Oyster Fried Rice");
+        Recipe recipe2 = new Recipe(2,"Lily Oyster Fried Rice", fullCourseMenu);
         recipe2.addIngredient(new Ingredients("Lily Flower"));
         recipe2.addIngredient(new Ingredients("Oyster"));
         recipe2.addIngredient(new Ingredients("Rice"));
@@ -35,8 +38,13 @@ public class  menuSystem {
         int addNewRecipeNumber = scanner.nextInt();
         scanner.nextLine();
 
-        Recipe newRecipeList = new Recipe(addNewRecipeNumber, addNewRecipeName);
-
+        System.out.println("Enter course type (HorsD'oeuvre, Soup, Fish, Meat, Main Course, Salad, Dessert or Drink):");
+        String courseType = scanner.nextLine().toUpperCase();
+        Recipe newRecipeList = ManagingFullCourseMenu.createRecipe(addNewRecipeNumber, addNewRecipeName, courseType);
+        if (newRecipeList == null) {
+            System.out.println("Invalid course type");
+            return;
+        }
         String addMoreIngredients;
         do {
             System.out.println("Add an ingredient name: ");
@@ -64,7 +72,7 @@ public class  menuSystem {
         } else {
             System.out.println("The recipe list:");
             for (Recipe recipe : newRecipesList) {
-                System.out.println("Recipe name: " + recipe.getRecipename() + "  | ID Number: " + recipe.getIdNumber());
+                System.out.println("Recipe name: " + recipe.getRecipename() + "  | ID Number: " + recipe.getIdNumber() + " | Course Type: " + recipe.getFullCourseMenu());
                 System.out.println("Ingredients: ");
                 for (Ingredients ingredient : recipe.getIngredients()) {
                     System.out.println("- " + ingredient.getName());
