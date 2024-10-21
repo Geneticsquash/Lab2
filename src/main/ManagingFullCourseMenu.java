@@ -11,7 +11,7 @@ public class ManagingFullCourseMenu {
         System.out.println("Enter recipe name");
         String recipeName = scanner.nextLine();
 
-        System.out.println("Enter course type (HorsD'oeuvre, Soup, Fish, Meat, Main Course, Salad, Dessert or Drink):");
+        System.out.println("Enter course type (HorsDoeuvre, Soup, Fish, Meat, MainCourse, Salad, Dessert, Drink):");
         String courseType = scanner.nextLine().toUpperCase();
 
         Recipe recipe = createRecipe(idNumber, recipeName, courseType);
@@ -24,28 +24,36 @@ public class ManagingFullCourseMenu {
 
         scanner.close();
     }
-
     public static Recipe createRecipe(int idNumber, String recipeName, String courseType) {
-        FullCourseMenu fullCourseMenu = FullCourseMenu.valueOf(courseType);
-        switch (courseType) {
-            case "HorsD'oeuvre":
-                return new HorsDoeuvre(idNumber, recipeName,fullCourseMenu );
-            case "Soup":
-                return new Soup(idNumber, recipeName, fullCourseMenu);
-            case "Fish":
-                return new Fish(idNumber, recipeName, fullCourseMenu);
-            case "Meat":
-                return new Meat(idNumber, recipeName, fullCourseMenu);
-            case "Main Course":
-                return new MainCourse(idNumber, recipeName, fullCourseMenu);
-            case "Salad":
-                return new Salad(idNumber, recipeName, fullCourseMenu);
-            case "Dessert":
-                return new Dessert(idNumber, recipeName, fullCourseMenu);
-            case "Drink":
-                return new Drink(idNumber, recipeName, fullCourseMenu);
+        FullCourseMenu fullCourseMenu;
+        switch (courseType.toUpperCase()) {
+            case "HORS D'OEUVRE":
+                fullCourseMenu = new HorsDoeuvre();
+                break;
+            case "SOUP":
+                fullCourseMenu = new Soup();
+                break;
+            case "FISH":
+                fullCourseMenu = new Fish();
+                break;
+            case "MEAT":
+                fullCourseMenu = new Meat();
+                break;
+            case "MAIN COURSE":
+                fullCourseMenu = new MainCourse();
+                break;
+            case "SALAD":
+                fullCourseMenu = new Salad();
+                break;
+            case "DESSERT":
+                fullCourseMenu = new Dessert();
+                break;
+            case "DRINK":
+                fullCourseMenu = new Drink();
+                break;
             default:
                 return null;
         }
-        }
+        return new Recipe(idNumber, recipeName, fullCourseMenu);
     }
+}

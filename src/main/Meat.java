@@ -1,5 +1,5 @@
-public class Meat extends Recipe {
-    public Meat(int idNumber, String recipeName, FullCourseMenu fullCourseMenu) {
-        super(idNumber, recipeName, fullCourseMenu);
+public class Meat extends FullCourseMenu {
+    public Meat() {
+        super("Meat");
     }
 }

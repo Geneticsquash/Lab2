@@ -9,21 +9,6 @@ public class menuSystem {
 
     public menuSystem() {
         this.recipes = new ArrayList<>();
-        assignAddRecipeSystem();
-    }
-    //TODO Recipe in class cannot be applied to given types (new)
-    // Need to fix it, so it can be applied to the given types
-    private void assignAddRecipeSystem() {
-        Recipe recipe1 = new Recipe(1,"Mineral Earthworm", FullCourseMenu.Main_Course);
-        recipe1.addIngredient(new Ingredients("Earthworm"));
-        newRecipesList.add(recipe1);
-
-
-        Recipe recipe2 = new Recipe(2,"Lily Oyster Fried Rice", FullCourseMenu.Fish);
-        recipe2.addIngredient(new Ingredients("Lily Flower"));
-        recipe2.addIngredient(new Ingredients("Oyster"));
-        recipe2.addIngredient(new Ingredients("Rice"));
-        newRecipesList.add(recipe2);
 
     }
 

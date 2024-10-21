@@ -1,5 +1,5 @@
-public class Drink extends Recipe {
-    public Drink(int idNumber, String recipeName, FullCourseMenu fullCourseMenu) {
-        super(idNumber, recipeName, fullCourseMenu);
+public class Drink extends FullCourseMenu {
+    public Drink() {
+        super("Drink");
     }
 }

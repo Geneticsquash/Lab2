@@ -1,5 +1,18 @@
-public class HorsDoeuvre extends Recipe {
-    public HorsDoeuvre(int idNumber, String recipeName, FullCourseMenu fullCourseMenu) {
-        super(idNumber, recipeName, fullCourseMenu);
+public class HorsDoeuvre extends FullCourseMenu {
+    public HorsDoeuvre() {
+        super("Hors d'oeuvre");
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

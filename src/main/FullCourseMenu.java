@@ -1,14 +1,12 @@
-public enum FullCourseMenu {
+public class FullCourseMenu {
+    private String courseType;
 
-    //TODO I´ll see what I can do with this enum
-    //https://www.youtube.com/watch?v=wq9SJb8VeyM
+    public FullCourseMenu(String courseName) {
+        this.courseType = courseName;
+    }
 
-    Hors_D_oeuvre,
-    Soup,
-    Fish,
-    Meat,
-    Main_Course,
-    Salad,
-    Dessert,
-    Drink
+    @Override
+    public String toString() {
+        return courseType;
+    }
 }
