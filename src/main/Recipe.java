@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-//TODO Trying to add preExisting recipes
+//TODO inheritance https://www.youtube.com/watch?v=zbVAU7lK25Q, https://www.w3schools.com/java/java_inheritance.asp
 class Recipe {
     private int idNumber;
     private String recipename;

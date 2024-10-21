@@ -36,8 +36,21 @@ public class  menuSystem {
         scanner.nextLine();
 
         Recipe newRecipeList = new Recipe(addNewRecipeNumber, addNewRecipeName);
+
+        String addMoreIngredients;
+        do {
+            System.out.println("Add an ingredient name: ");
+            String ingredientName = scanner.nextLine();
+            Ingredients ingredient = new Ingredients(ingredientName);
+            newRecipeList.addIngredient(ingredient);
+
+            System.out.println("Do you want to add another ingredient? (yes/no): ");
+            addMoreIngredients = scanner.nextLine();
+
+        } while (addMoreIngredients.equalsIgnoreCase("yes"));
         newRecipesList.add(newRecipeList);
-        System.out.println("You added a new recipe, hope it doest taste as horrible as last time...");
+        System.out.println("Recipe has been added to the list!");
+
 }
 
 
@@ -82,7 +95,7 @@ public class  menuSystem {
 
 
         if (!removeFound) {
-            System.out.println("Recipe with ID" + removeRecipeIdNumber + " was not found, try again!");
+            System.out.println("Recipe with ID" + removeRecipeIdNumber + " was not found, don´t try it again!");
         }
 
     }
