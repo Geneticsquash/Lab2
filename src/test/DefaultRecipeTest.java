@@ -36,5 +36,9 @@ class DefaultRecipeTest {
     }
 
     @Test
+    void Ingredients () {
+        Ingredients rice = new Ingredients("Sushi Rice");
+        assertEquals("Sushi Rice", rice.getName());
+    }
 }
 
