@@ -38,7 +38,7 @@ class DefaultRecipeTest {
     @Test
     void Ingredients () {
         Ingredients rice = new Ingredients("Sushi Rice");
-        assertEquals("Sushi Rice", rice.getName());
+        assertEquals("Sushi Rice", rice.getName()); // Test if the name is correct
     }
 }
 
