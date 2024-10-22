@@ -13,7 +13,7 @@ public class menuSystem {
     }
 
 
-//TODO "Need to update addRecipeSystem!" (It´s Updated!!!)
+//TODO "Need to update addRecipeSystem!" (It´s Updated!!!) (Updated again!)
     public void addRecipeSystem() {
 
         Scanner scanner = new Scanner(System.in);
@@ -23,7 +23,7 @@ public class menuSystem {
         int addNewRecipeNumber = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.println("Enter course type (HorsD'oeuvre, Soup, Fish, Meat, Main Course, Salad, Dessert or Drink):");
+        System.out.println("Enter course type (Hors D'oeuvre, Soup, Fish, Meat, Main Course, Salad, Dessert or Drink):");
         String courseType = scanner.nextLine().toUpperCase();
         Recipe newRecipeList = ManagingFullCourseMenu.createRecipe(addNewRecipeNumber, addNewRecipeName, courseType);
         if (newRecipeList == null) {
@@ -32,7 +32,7 @@ public class menuSystem {
         }
         String addMoreIngredients;
         do {
-            System.out.println("Add an ingredient name: ");
+            System.out.println("Add an ingredient (e.g, 2mg of salt): ");
             String ingredientName = scanner.nextLine();
             Ingredients ingredient = new Ingredients(ingredientName);
             newRecipeList.addIngredient(ingredient);
@@ -49,6 +49,7 @@ public class menuSystem {
 
 //TODO Works fine, somehow when adding a recipe it duplicate itself? (old)
     //TODO Need to update viewRecipeSystem! doesnt view the recipe correctly!
+    // Updated viewRecipeSystem! (Updated again!)
 
 
     public void viewRecipeSystem() {
@@ -68,7 +69,7 @@ public class menuSystem {
     }
 
 
-//TODO Add/Fix removeMethod! https://www.youtube.com/watch?v=4VRvHdVrd1Y
+//TODO Add/Fix removeMethod! https://www.youtube.com/watch?v=4VRvHdVrd1Y (Fixed!)
     public void removeRecipeSystem() {
 
 

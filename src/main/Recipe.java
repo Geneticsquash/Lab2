@@ -32,6 +32,7 @@ public class Recipe extends Ingredients {
     public FullCourseMenu getFullCourseMenu() {
         return fullCourseMenu;
     }
+
     // Completion and inspection system broken!!
     @Override
     public boolean equals(Object o) {

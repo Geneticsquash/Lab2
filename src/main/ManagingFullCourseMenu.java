@@ -11,7 +11,7 @@ public class ManagingFullCourseMenu {
         System.out.println("Enter recipe name");
         String recipeName = scanner.nextLine();
 
-        System.out.println("Enter course type (HorsDoeuvre, Soup, Fish, Meat, MainCourse, Salad, Dessert, Drink):");
+        System.out.println("Enter course type (Hors D'oeuvre, Soup, Fish, Meat, MainCourse, Salad, Dessert, Drink):");
         String courseType = scanner.nextLine().toUpperCase();
 
         Recipe recipe = createRecipe(idNumber, recipeName, courseType);
