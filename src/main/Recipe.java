@@ -14,7 +14,6 @@ public class Recipe extends Ingredients {
     this.fullCourseMenu = fullCourseMenu;
     this.ingredients = new ArrayList<>(); // Generics
 
-
     }
 
     public int getIdNumber() {
@@ -33,7 +32,6 @@ public class Recipe extends Ingredients {
         return fullCourseMenu;
     }
 
-    // Completion and inspection system broken!!
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

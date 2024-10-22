@@ -1,13 +1,14 @@
 //TODO 1: Create a class with name FullCourseMenu with below attributes (Test Commit)
-public class FullCourseMenu {
+//TODO Problem with toString() method on all extended classes!
+
+public abstract class FullCourseMenu {
     private String courseType;
 
-    public FullCourseMenu(String courseName) {
-        this.courseType = courseName;
+    public FullCourseMenu(String courseType) {
+        this.courseType = courseType;
     }
 
-    @Override
-    public String toString() {
+    public String getCourseType() {
         return courseType;
     }
 }

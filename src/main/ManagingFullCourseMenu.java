@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+
+//TODO: Create a system where you can create a recipe, while adding ingredient,
+// Do I need to change so there is only one main class?
 public class ManagingFullCourseMenu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
