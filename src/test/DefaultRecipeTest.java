@@ -34,5 +34,7 @@ class DefaultRecipeTest {
         newRecipeList.addIngredient(rice);
         assertEquals("Sushi Rice", newRecipeList.getIngredients().get(0).getName());
     }
+
+    @Test
 }
 
