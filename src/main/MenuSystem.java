@@ -2,12 +2,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class menuSystem {
+public class MenuSystem {
     private List<Recipe> recipes;
     private static ArrayList<Recipe> newRecipesList = new ArrayList<>();
 
 
-    public menuSystem() {
+    public MenuSystem() {
         this.recipes = new ArrayList<>();
 
     }
@@ -15,36 +15,49 @@ public class menuSystem {
 
 //TODO "Need to update addRecipeSystem!" (It´s Updated!!!) (Updated again!)
     public void addRecipeSystem() {
-
         Scanner scanner = new Scanner(System.in);
         System.out.println("Add a new recipe name: ");
         String addNewRecipeName = scanner.nextLine();
-        System.out.println("Add a new recipe number: ");
-        int addNewRecipeNumber = scanner.nextInt();
-        scanner.nextLine();
 
-        System.out.println("Enter course type (Hors D'oeuvre, Soup, Fish, Meat, Main Course, Salad, Dessert or Drink):");
-        String courseType = scanner.nextLine().toUpperCase();
-        Recipe newRecipeList = ManagingFullCourseMenu.createRecipe(addNewRecipeNumber, addNewRecipeName, courseType);
-        if (newRecipeList == null) {
-            System.out.println("Invalid course type");
-            return;
+        System.out.println("Add a new recipe number: ");
+        int addNewRecipeNumber = 0;
+        while (true) {
+            try {
+                addNewRecipeNumber = Integer.parseInt(scanner.nextLine());
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Enter a valid number");
+            }
         }
+
+        System.out.println("Hors D'oeuvre, Soup, Fish, Meat, Main Course, Salad, Dessert or Drink:");
+        String courseType;
+        Recipe newRecipeList;
+
+        while (true) {
+            courseType = scanner.nextLine().toUpperCase();
+            newRecipeList = ManagingFullCourseMenu.createRecipe(addNewRecipeNumber, addNewRecipeName, courseType);
+            if (newRecipeList != null) {
+                break;
+            } else {
+                System.out.println("Invalid course type, please try again:");
+            }
+        }
+
         String addMoreIngredients;
         do {
-            System.out.println("Add an ingredient (e.g, 2mg of salt): ");
+            System.out.println("Add an ingredient (e.g., 2mg of salt): ");
             String ingredientName = scanner.nextLine();
             Ingredients ingredient = new Ingredients(ingredientName);
             newRecipeList.addIngredient(ingredient);
 
             System.out.println("Do you want to add another ingredient? (yes/no): ");
             addMoreIngredients = scanner.nextLine();
-
         } while (addMoreIngredients.equalsIgnoreCase("yes"));
+
         newRecipesList.add(newRecipeList);
         System.out.println("Recipe has been added to the list!");
-
-}
+    }
 
 
 //TODO Works fine, somehow when adding a recipe it duplicate itself? (old)
@@ -71,11 +84,18 @@ public class menuSystem {
 
 //TODO Add/Fix removeMethod! https://www.youtube.com/watch?v=4VRvHdVrd1Y (Fixed!)
     public void removeRecipeSystem() {
-
-
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter the name to remove a recipe: ");
-        int removeRecipeIdNumber = Integer.parseInt(input.nextLine());
+
+        System.out.println("Enter the ID number to remove a recipe: ");
+        int removeRecipeIdNumber = 0;
+        while (true) {
+            try {
+                removeRecipeIdNumber = Integer.parseInt(input.nextLine());
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter a valid number.");
+            }
+        }
         boolean removeFound = false;
 
             for (int i = 0; i < newRecipesList.size(); i++) {
@@ -94,4 +114,8 @@ public class menuSystem {
 
     }
 
+    public List<Recipe> getRecipes() {
+        return newRecipesList;
+
+    }
 }

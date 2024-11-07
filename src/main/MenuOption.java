@@ -3,7 +3,7 @@ class MenuOption {
 
 //TODO
 // Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.util.ArrayList.add(Object)" because "this.ingredients" is null
-// Combine MenuOption, menuSystem and ManagingFullCourseClass
+// Combine MenuOption, MenuSystem and ManagingFullCourseClass
 public MenuOption() {
 
 
@@ -11,7 +11,7 @@ public MenuOption() {
         String[] menuOption = {
                 "1. Add a new recipe to the menu", "2. View all the recipes we have on the menu", "3. Remove a recipe from the menu", "0. Exit the program"
         };
-         menuSystem menu = new menuSystem();
+         MenuSystem menu = new MenuSystem();
 
 
         do {
