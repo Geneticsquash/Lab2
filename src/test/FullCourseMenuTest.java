@@ -40,7 +40,7 @@ class FullCourseMenuTest {
 
         assertEquals("Salad", fullCourseMenu.getCourseType());
     }
-
+    @Test
     void testGetCourseTypeSoup() {
         FullCourseMenu fullCourseMenu = new Soup();
 
