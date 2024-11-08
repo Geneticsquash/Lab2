@@ -14,16 +14,22 @@ public MenuOption() {
          MenuSystem menu = new MenuSystem();
 
 
-        do {
+    do {
+        try {
             System.out.println("Choose an option");
 
             for (String option : menuOption) {
                 System.out.println(option);
             }
             System.out.println("Enter your choice");
+
             Scanner scanner = new Scanner(System.in);
             menuChoice = scanner.nextInt();
             scanner.nextLine();
+        } catch (Exception e) {
+            System.out.println("");
+            menuChoice = -1;
+        }
 
             switch (menuChoice) {
                 // TODO: Create a system where you can create a recipe, while adding ingredient
