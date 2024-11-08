@@ -2,31 +2,9 @@ import java.util.Scanner;
 
 
 //TODO: Create a system where you can create a recipe, while adding ingredient,
-// Do I need to change so there is only one main class?
+
 public class ManagingFullCourseMenu {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter recipe ID number");
-        int idNumber = scanner.nextInt();
-        scanner.nextLine();
-
-        System.out.println("Enter recipe name");
-        String recipeName = scanner.nextLine();
-
-        System.out.println("Enter course type (Hors D'oeuvre, Soup, Fish, Meat, MainCourse, Salad, Dessert, Drink):");
-        String courseType = scanner.nextLine().toUpperCase();
-
-        Recipe recipe = createRecipe(idNumber, recipeName, courseType);
-
-        if (recipe != null) {
-            System.out.println("Recipe created: " + recipe.getRecipename() + " (" + courseType + ")");
-        } else {
-            System.out.println("Invalid course type");
-        }
-
-        scanner.close();
-    }
     public static Recipe createRecipe(int idNumber, String recipeName, String courseType) {
         FullCourseMenu fullCourseMenu;
         switch (courseType.toUpperCase()) {
